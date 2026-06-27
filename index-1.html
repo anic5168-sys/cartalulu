@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para ti, mi Axelitolulu ❤️</title>
+<style>
+body{margin:0;font-family:Georgia,serif;background:linear-gradient(135deg,#ffd6e7,#fff);overflow:hidden}
+#env{display:flex;justify-content:center;align-items:center;height:100vh;flex-direction:column}
+button{padding:14px 28px;border:none;border-radius:30px;background:#ff5c93;color:#fff;font-size:20px;cursor:pointer}
+#letter{display:none;max-width:760px;background:#fff;margin:20px auto;padding:28px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);height:80vh;overflow:auto}
+h1{text-align:center;color:#ff5c93}
+#typed{white-space:pre-wrap;line-height:1.8;color:#555}
+.heart{position:fixed;top:-20px;animation:fall linear forwards;color:#ff5c93}
+@keyframes fall{to{transform:translateY(110vh)}}
+</style></head><body>
+<div id="env"><h2>💌 Tienes un mensaje</h2><button onclick="openL()">Ábreme ❤️</button></div>
+<div id="letter"><h1>Para ti, mi Axelitolulu ❤️</h1><div id="typed"></div><p style="text-align:center"><button onclick="window.open('https://www.youtube.com/results?search_query=Manuel+Medrano+Si+Pudiera','_blank')">🎵 Reproducir "Si Pudiera"</button></p></div>
+<script>
+const text=`Holi... 🤍
+
+Mmm... no sé muy bien cómo empezar, pero supongo que las cosas que nacen del corazón nunca encuentran un inicio perfecto.
+
+Cada vez que tengo la oportunidad de estar a tu lado, el tiempo se siente diferente. Todavía no conozco todas las partes de ti, pero me emociona descubrirlas poco a poco.
+
+Los detalles que he tenido contigo nacen de mi corazón. No busco algo pasajero, me gustaría construir algo bonito, sincero y transparente.
+
+Gracias a ti estoy volviendo a confiar, a sentir ilusión y a creer que las cosas bonitas también pueden pasar. Solo espero que no me rompas el corazón.
+
+Yo solo quiero darte amor, tranquilidad, apoyo, risas y momentos lindos, nunca desilusiones.
+
+Espero que la pases bonito conmigo y que podamos crear recuerdos que nos hagan sonreír.
+
+Gracias por devolverle un poquito de brillo a mis días.
+
+Con muchísimo cariño...
+
+Para ti, mi Axelitolulu. ❤️`;
+function openL(){env.style.display='none';letter.style.display='block';let i=0;let t=setInterval(()=>{typed.textContent+=text[i++]||'';if(i>text.length)clearInterval(t);},25);}
+setInterval(()=>{let h=document.createElement('div');h.className='heart';h.textContent=Math.random()>.5?'❤️':'✨';h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*18)+'px';h.style.animationDuration=(4+Math.random()*5)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),9000);},300);
+</script></body></html>
